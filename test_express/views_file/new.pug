@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+  body
+    //
+      ★주석- form을 submit 하게 되면 post방식을 통해 /topic경로로 정보가 이동
+    form(action='/topic' method='post')
+      p
+        input(type='text' name='title' placeholder='title')
+      p
+        textarea(name='description' placeholder='description')
+      p
+        input(type='submit')

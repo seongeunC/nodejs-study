@@ -1,0 +1,20 @@
+
+> mkdir myapp
+
+> cd myapp
+
+> npm init
+
+> npm install express --save
+
+> npm install express-generator -g
+
+> express -h
+
+> express --view=pug myapp
+
+> cd myapp
+
+> npm install
+
+> set DEBUG=myapp:* & npm start //리눅스 $ DEBUG=myapp:* npm start

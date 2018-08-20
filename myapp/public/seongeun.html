@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Document</title>
+
+  <!-- header부분의 css-->
+  <style>
+    .affix {
+      top: 0;
+      width: 100%;
+      z-index: 9999 !important;
+    }
+
+    .affix+.container-fluid {
+      padding-top: 70px;
+    }
+  </style>
+  <!--첫번째 section 사진에 관한 css-->
+  <style>
+
+    .carousel-inner>.item>img,
+    .carousel-inner>.item>a>img {
+      width: 70%;
+      height : 500px;
+      margin: auto;
+    }
+
+  </style>
+  <!--두번째 section 공부에 관한 css-->
+  <style>
+    .row{
+      height :200px;
+      width : 100%;
+      text-align:center;
+
+    }
+    .thumbnail {
+      display:inline-block;
+      width : 50%;
+      padding: 0 0 15px 0;
+      height : 100px;
+      border: none;
+      border-radius: 0;
+    }
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin :0px 0px 10px 0px;
+    }
+  </style>
+  <!--이미지 클릭시 화면 확대 js-->
+  <script>
+    function click(this) {
+      var part = document.getElementById("part")
+    }
+  </script>
+</head>
+
+<body>
+  <!--header log navbar -->
+  <header>
+    <div class="container-fluid" style="background-color:#F44336;color:#fff;height:200px;">
+      <h1>seongeun</h1>
+    </div>
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#first-section">myphoto</a></li>
+        <li><a href="#second-section">study</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--첫번째 section (사진) -->
+  <section id="first-section">
+    <article id="photo_article">
+      <div class="container"><br>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <!--1번째 사진-->
+            <div class="item active">
+              <img src="img/1.jpg" alt="Chania" width="460" height="345">
+              <div class="carousel-caption">
+                <h3>Chania</h3>
+                <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+              </div>
+            </div>
+            <!--2번째 사진-->
+            <div class="item">
+              <img src="img/2.jpg" alt="Chania" width="460" height="345">
+              <div class="carousel-caption">
+                <h3>Chania</h3>
+                <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+              </div>
+            </div>
+            <!--3번째 사진-->
+            <div class="item">
+              <img src="img/3.png" alt="Flower" width="460" height="345">
+              <div class="carousel-caption">
+                <h3>Flowers</h3>
+                <p>Beautiful flowers in Kolymbari, Crete.</p>
+              </div>
+            </div>
+            <!--4번째 사진-->
+            <div class="item">
+              <img src="img/4.jpg" alt="Flower" width="460" height="345">
+              <div class="carousel-caption">
+                <h3>Flowers</h3>
+                <p>Beautiful flowers in Kolymbari, Crete.</p>
+              </div>
+            </div>
+          </div>
+          <!--왼쪽방향 화살표-->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+          <!--오른쪽방향 화살표-->
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!--두번째 section (공부)-->
+  <section id="second-section">
+    <article id="study_article">
+      <!-- Container (Portfolio Section) -->
+      <div id="portfolio" class="container-fluid text-center bg-grey">
+        <h2>Portfolio</h2><br>
+        <h4>내 생각 (명-걷지)</h4>
+        <div class="row text-center slideanim">
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="http://www.naver.com"><img id="part" src="img/python1.png" alt="Pyhton" width="400" height="300"></a>
+              <p><strong>Python</strong></p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="http://www.naver.com"><img id="part" src="img/raspberrypi.jpg" alt="Raspberrypi" width="400" height="300"></a>
+              <p><strong>Raspberrypi</strong></p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="http://www.naver.com"><img id="part" src="img/blockchain.jpg" alt="Blockchain" width="400" height="300"></a>
+              <p><strong>Blockchain</strong></p>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center slideanim">
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="http://www.naver.com"><img id="part" src="img/frontend.png" alt="Frontend" width="400" height="300"></a>
+              <p><strong>Frontend</strong></p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="http://www.naver.com"><img id="part" src="img/nodejs.png" alt="Nodejs" width="400" height="300"></a>
+              <p><strong>nodejs</strong></p>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="thumbnail">
+              <a href="http://www.naver.com"><img id="part" src="img/atmega.jpg" alt="Atemga" width="400" height="300"></a>
+              <p><strong>atmega</strong></p>
+            </div>
+          </div>
+        </div><br>
+    </article>
+  </section>
+
+  <section>
+
+  </section>
+
+</body>
+
+</html>
